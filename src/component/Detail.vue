@@ -26,14 +26,6 @@
 <script>
 	export default {
 		name: 'detail',
-		data () {
-			return {
-				cur: {
-					content:'',
-					date:''
-				}
-			}
-		},
 		computed: {
 			cur () {
 				let tarObj = null;
@@ -65,7 +57,7 @@
 			},
 			markOn () {
 				if(confirm('确认标记为未完成？')) {
-					this.$store.dispatch('removeItem',this.$route.params.itemId);
+					this.$store.dispatch('markOn',this.$route.params.itemId);
 					this.$router.go(-1);
 				}
 			}
@@ -83,6 +75,7 @@
 		.text {
 			width: 100%;
 			padding: 0.2rem;
+			font-size: .24rem;
 			word-break: break-all;
 		}
 

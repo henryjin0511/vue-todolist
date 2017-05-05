@@ -34,7 +34,7 @@
 				item.content = this.content;
 				item.date = (()=>{
 					let date = new Date();
-					return date.getFullYear() + '-' + date.getMonth()+1 + '-' + date.getDate();
+					return date.getFullYear() + '-' + (date.getMonth()+1) + '-' + date.getDate();
 				})();
 				Object.assign(tem,item);
 				this.$store.dispatch('addItem',tem);

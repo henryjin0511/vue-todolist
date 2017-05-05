@@ -1,10 +1,11 @@
 {
-  "name": "vue-webpack",
+  "name": "vue-todolist",
   "version": "1.0.0",
   "description": "A Vue.js project",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --port 9090 --open --hot",
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+    "watch": "cross-env NODE_ENV=dev webpack-dev-server --inline --port 9090 --open",
+    "dev": "cross-env NODE_ENV=dev webpack --progress --watch --profile --colors",
+    "build": "cross-env NODE_ENV=prod webpack --progress --profile --colors"
   },
   "author": "JM",
   "license": "ISC",
@@ -29,7 +30,8 @@
     "vue-style-loader": "^1.0.0",
     "vue-template-compiler": "^2.1.4",
     "webpack": "^2.4.1",
-    "webpack-dev-server": "^2.4.5"
+    "webpack-dev-server": "^2.4.5",
+    "webpack-merge": "^4.1.0"
   },
   "dependencies": {
     "vue": "^2.1.4",

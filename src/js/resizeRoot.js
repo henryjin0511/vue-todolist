@@ -1,5 +1,5 @@
 (function resizeRoot(){
-	var device_width = 750,order = 0,uAgent = window.navigator.userAgent,isIOS = uAgent.match(/iphone/i),wWidth,wHeight,dpr = window.devicePixelRatio,wFsize;
+	let device_width = 750,order = 0,uAgent = window.navigator.userAgent,isIOS = uAgent.match(/iphone/i),wWidth,wHeight,dpr = window.devicePixelRatio,wFsize;
 	(function get_width(){
 		if(window.innerWidth === 320 && window.innerHeight === 240 && order <20){
 			order++;

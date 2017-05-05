@@ -39,6 +39,9 @@
 
 <script>
 	export default{
+		created () {
+			return this.$store.dispatch('initData');
+		},
 		computed: {
 			items () {
 				return this.$store.state.list;
@@ -89,7 +92,7 @@
 			}
 
 			a{
-				width: 0.8rem;
+				width: 1rem;
 				text-align: center;
 
 				&.finished{

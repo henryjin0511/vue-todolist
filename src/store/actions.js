@@ -11,5 +11,8 @@ export default {
 	},
 	markOff ({commit},itemId) {
 		commit(types.MARK_OFF,itemId);
+	},
+	initData ({commit}) {
+		commit(types.INIT_DATA);
 	}
 }
